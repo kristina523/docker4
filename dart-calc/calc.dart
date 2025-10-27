@@ -25,7 +25,7 @@ void main() {
       result = num1 ~/ num2;
       break;
     default:
-      stdout.write('Invalid operator');
+      stdout.write('Недопустимый оператор');
       return;
   }
 
