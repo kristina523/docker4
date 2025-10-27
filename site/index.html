@@ -2,26 +2,138 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Главная страница</title>
+    <title>Практическая работа №4 - Docker</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #f5f5f5;
+      }
+      header {
+        background-color: #333;
+        color: white;
+        padding: 20px;
+        margin-bottom: 30px;
+      }
+      nav ul {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        gap: 20px;
+      }
+      nav a {
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+      }
+      nav a:hover {
+        color: #4CAF50;
+      }
+      .app-card {
+        background: white;
+        border-radius: 10px;
+        padding: 20px;
+        margin-bottom: 20px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      }
+      .app-card h2 {
+        color: #333;
+        margin-top: 0;
+      }
+      .language-badge {
+        display: inline-block;
+        background: #4CAF50;
+        color: white;
+        padding: 5px 10px;
+        border-radius: 5px;
+        font-size: 14px;
+        margin-right: 10px;
+      }
+      footer {
+        text-align: center;
+        margin-top: 40px;
+        padding: 20px;
+        background-color: #333;
+        color: white;
+      }
+      img {
+        max-width: 600px;
+        height: auto;
+        border-radius: 10px;
+        margin: 20px 0;
+      }
+    </style>
   </head>
   <body>
     <header>
       <nav>
         <ul>
           <li><a href="index.html">Главная</a></li>
-          <li><a href="about.html">О нас</a></li>
-          <li><a href="contact.html">Контакты</a></li>
           <li><a href="frog.html">Секретная страница</a></li>
         </ul>
       </nav>
     </header>
     <main>
-      <h1>Добро пожаловать на мой сайт!</h1>
-      <p>Это практическая работа по Docker. Здесь представлены различные программы и веб-страницы.</p>
-      <p>Используйте меню навигации для перехода по разделам сайта.</p>
+      <h1>Практическая работа №4 - Собственные Dockerfile</h1>
+      <p>Добро пожаловать! Здесь представлены различные программы, которые контейнеризованы с помощью Docker.</p>
+      
+      <div class="app-card">
+        <h2>1. Python Calculator <span class="language-badge">Python</span></h2>
+        <p><strong>Описание:</strong> Простой калькулятор на Python с интерактивным меню для выполнения арифметических операций (сложение, вычитание, умножение, деление).</p>
+        <p><strong>Команды сборки и запуска:</strong></p>
+        <code>docker build -t calc-python calc-py/</code><br>
+        <code>docker run -it --name my-calc-python calc-python</code>
+      </div>
+
+      <div class="app-card">
+        <h2>2. Java Calculator <span class="language-badge">Java</span></h2>
+        <p><strong>Описание:</strong> Калькулятор на Java, выполняющий базовые арифметические операции с двумя числами.</p>
+        <p><strong>Команды сборки и запуска:</strong></p>
+        <code>docker build -t calc-java calc-java/</code><br>
+        <code>docker run -it --name my-calc-java calc-java</code>
+      </div>
+
+      <div class="app-card">
+        <h2>3. Dart Calculator <span class="language-badge">Dart</span></h2>
+        <p><strong>Описание:</strong> Калькулятор на Dart для выполнения арифметических операций.</p>
+        <p><strong>Команды сборки и запуска:</strong></p>
+        <code>docker build -t calc-dart dart-calc/</code><br>
+        <code>docker run -it --name my-calc-dart calc-dart</code>
+      </div>
+
+      <div class="app-card">
+        <h2>4. Java Guessing Game <span class="language-badge">Java</span></h2>
+        <p><strong>Описание:</strong> Игра "Угадай число" на Java, где компьютер загадывает число от 1 до 100, а пользователь пытается его угадать.</p>
+        <p><strong>Команды сборки и запуска:</strong></p>
+        <code>docker build -t game-java game-java/</code><br>
+        <code>docker run -it --name my-game-java game-java</code>
+      </div>
+
+      <div class="app-card">
+        <h2>5. Rock Paper Scissors Game <span class="language-badge">Python</span></h2>
+        <p><strong>Описание:</strong> Классическая игра "Камень-ножницы-бумага" на Python, где игрок играет против компьютера.</p>
+        <p><strong>Команды сборки и запуска:</strong></p>
+        <code>docker build -t rpsgame-python rpsgame-py/</code><br>
+        <code>docker run -it --name my-rpsgame rpsgame-python</code>
+      </div>
+
+      <div class="app-card">
+        <h2>6. Static HTML Website <span class="language-badge">Nginx</span></h2>
+        <p><strong>Описание:</strong> Этот сайт! Статический HTML-сайт, раздаваемый через nginx в Docker контейнере.</p>
+        <p><strong>Команды сборки и запуска:</strong></p>
+        <code>docker build -t my-website site/</code><br>
+        <code>docker run -d -p 8080:80 --name my-site my-website</code>
+      </div>
+
+      <h2>GitHub репозиторий</h2>
+      <p>Весь исходный код доступен на: <a href="https://github.com/kristina523/docker4">https://github.com/kristina523/docker4</a></p>
+
     </main>
     <footer>
-      Авторские права © 2023/2024 MPT
+      Авторские права © 2023/2024 MPT<br>
+      Практическая работа №4 - Docker
     </footer>
   </body>
 </html>

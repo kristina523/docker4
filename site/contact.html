@@ -2,33 +2,62 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Контакты</title>
+    <title>Инструкции</title>
   </head>
   <body>
     <header>
       <nav>
         <ul>
           <li><a href="index.html">Главная</a></li>
-          <li><a href="about.html">О нас</a></li>
-          <li><a href="contact.html">Контакты</a></li>
+          <li><a href="about.html">О проекте</a></li>
           <li><a href="frog.html">Секретная страница</a></li>
         </ul>
       </nav>
     </header>
     <main>
-      <h1>Свяжитесь с нами</h1>
-      <form action="submit-form.php" method="post">
-        <label for="name">Имя:</label>
-        <input type="text" id="name" name="name" required>
+      <h1>Инструкции по использованию</h1>
+      
+      <h2>Как собрать и запустить контейнеры</h2>
+      
+      <h3>Python Calculator</h3>
+      <pre>cd calc-py
+docker build -t calc-python .
+docker run -it --name my-calc-python calc-python</pre>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
+      <h3>Java Calculator</h3>
+      <pre>cd calc-java
+docker build -t calc-java .
+docker run -it --name my-calc-java calc-java</pre>
 
-        <label for="message">Сообщение:</label>
-        <textarea id="message" name="message" required></textarea>
+      <h3>Dart Calculator</h3>
+      <pre>cd dart-calc
+docker build -t calc-dart .
+docker run -it --name my-calc-dart calc-dart</pre>
 
-        <input type="submit" value="Отправить">
-      </form>
+      <h3>Java Guessing Game</h3>
+      <pre>cd game-java
+docker build -t game-java .
+docker run -it --name my-game-java game-java</pre>
+
+      <h3>Rock Paper Scissors Game</h3>
+      <pre>cd rpsgame-py
+docker build -t rpsgame-python .
+docker run -it --name my-rpsgame rpsgame-python</pre>
+
+      <h3>Website</h3>
+      <pre>cd site
+docker build -t my-website .
+docker run -d -p 8080:80 --name my-site my-website</pre>
+
+      <h2>Полезные команды Docker</h2>
+      <ul>
+        <li><code>docker ps</code> - показать запущенные контейнеры</li>
+        <li><code>docker ps -a</code> - показать все контейнеры</li>
+        <li><code>docker images</code> - показать образы</li>
+        <li><code>docker stop &lt;name&gt;</code> - остановить контейнер</li>
+        <li><code>docker rm &lt;name&gt;</code> - удалить контейнер</li>
+      </ul>
+
     </main>
     <footer>
       Авторские права © 2023/2024 MPT
