@@ -12,16 +12,16 @@ def multiplication(num1, num2):
 def division(num1, num2):
     return num1 / num2
 
-print("Select operation.")
-print("1. Addition")
-print("2. Subtraction")
-print("3. Multiplication")
-print("4. Division")
+print("Выбирите операцию.")
+print("1. Сложение")
+print("2. Вычитание")
+print("3. Умножение")
+print("4. Деление")
 
-choice = int(input("Enter choice(1/2/3/4): "))
+choice = int(input("Выбирите вариант(1/2/3/4): "))
 
-num1 = int(input("Enter first number: "))
-num2 = int(input("Enter second number: "))
+num1 = int(input("Введите первое число: "))
+num2 = int(input("Введите второе число: "))
 
 if choice == 1:
     print(num1, "+", num2, "=", addition(num1, num2))

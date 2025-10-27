@@ -1,13 +1,13 @@
 import 'dart:io';
 
 void main() {
-  stdout.write('Enter first number: ');
+  stdout.write('Введите первое число: ');
   int num1 = int.parse(stdin.readLineSync()!);
 
-  stdout.write('Enter second number: ');
+  stdout.write('Введите второе число: ');
   int num2 = int.parse(stdin.readLineSync()!);
 
-  stdout.write('Enter operator (+, -, *, /): ');
+  stdout.write('Выберите операцию (+, -, *, /): ');
   String operator = stdin.readLineSync()!;
 
   int result;
@@ -29,5 +29,5 @@ void main() {
       return;
   }
 
-  stdout.write('Result: $result');
+  stdout.write('Результат: $result');
 }
