@@ -1,59 +1,77 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <meta charset="UTF-8">
     <title>Практическая работа №4 - Docker</title>
-  </head>
-  <body>
+</head>
+<body>
     <h1>Практическая работа №4 - Собственные Dockerfile</h1>
-    <p>Добро пожаловать! Здесь представлены различные программы, которые контейнеризованы с помощью Docker.</p>
     
-    <h2>Программы:</h2>
+    <h2>GitHub репозиторий</h2>
+    <p><a href="https://github.com/kristina523/docker4">https://github.com/kristina523/docker4</a></p>
+
+    <h2>Интерактивные приложения (работают прямо в браузере):</h2>
     
-    <h3>1. Python Calculator (Калькулятор на Python)</h3>
+    <h3>Python Calculator (Калькулятор на Python)</h3>
     <p><strong>Описание:</strong> Простой калькулятор на Python с интерактивным меню.</p>
-    <p><strong>Команды сборки и запуска:</strong></p>
+    <p><strong>Docker команды:</strong></p>
     <pre>docker build -t calc-python calc-py/
 docker run -it --name my-calc-python calc-python</pre>
 
-    <h3>2. Java Calculator (Калькулятор на Java)</h3>
-    <p><strong>Описание:</strong> Калькулятор на Java, выполняющий базовые арифметические операции.</p>
-    <p><strong>Команды сборки и запуска:</strong></p>
+    <h3>Java Calculator (Калькулятор на Java)</h3>
+    <p><strong>Описание:</strong> Калькулятор на Java для арифметических операций.</p>
+    <p><strong>Docker команды:</strong></p>
     <pre>docker build -t calc-java calc-java/
 docker run -it --name my-calc-java calc-java</pre>
 
-    <h3>3. Dart Calculator (Калькулятор на Dart)</h3>
-    <p><strong>Описание:</strong> Калькулятор на Dart для выполнения арифметических операций.</p>
-    <p><strong>Команды сборки и запуска:</strong></p>
+    <h3>Dart Calculator (Калькулятор на Dart)</h3>
+    <p><strong>Описание:</strong> Калькулятор на Dart для арифметических операций.</p>
+    <p><strong>Docker команды:</strong></p>
     <pre>docker build -t calc-dart dart-calc/
 docker run -it --name my-calc-dart calc-dart</pre>
 
-    <h3>4. Java Guessing Game (Игра "Угадай число" на Java)</h3>
+    <h3>Java Guessing Game (Игра "Угадай число" на Java)</h3>
     <p><strong>Описание:</strong> Игра на Java, где компьютер загадывает число от 1 до 100.</p>
-    <p><strong>Команды сборки и запуска:</strong></p>
+    <p><strong>Docker команды:</strong></p>
     <pre>docker build -t game-java game-java/
 docker run -it --name my-game-java game-java</pre>
 
-    <h3>5. Rock Paper Scissors Game (Игра "Камень-ножницы-бумага" на Python)</h3>
+    <h3>Rock Paper Scissors Game (Игра "Камень-ножницы-бумага" на Python)</h3>
     <p><strong>Описание:</strong> Классическая игра на Python, где игрок играет против компьютера.</p>
-    <p><strong>Команды сборки и запуска:</strong></p>
+    <p><strong>Docker команды:</strong></p>
     <pre>docker build -t rpsgame-python rpsgame-py/
 docker run -it --name my-rpsgame rpsgame-python</pre>
 
-    <h3>6. Static HTML Website (Веб-сайт)</h3>
+    <h3>Static HTML Website (Веб-сайт на Nginx)</h3>
     <p><strong>Описание:</strong> Этот сайт! Статический HTML-сайт, раздаваемый через nginx в Docker контейнере.</p>
-    <p><strong>Команды сборки и запуска:</strong></p>
+    <p><strong>Docker команды:</strong></p>
     <pre>docker build -t my-website site/
 docker run -d -p 8080:80 --name my-site my-website</pre>
 
-    <h2>GitHub репозиторий</h2>
-    <p>Весь исходный код доступен на: <a href="https://github.com/kristina523/docker4">https://github.com/kristina523/docker4</a></p>
-
-    <p><a href="about.html">О проекте</a> | <a href="frog.html">Секретная страница</a></p>
+    <hr>
     
+    <h2>О проекте</h2>
+    <p>Этот проект демонстрирует создание собственных Dockerfile для различных типов приложений.</p>
+    <p><strong>Цели работы:</strong></p>
+    <ul>
+        <li>Написать собственные Dockerfile для программ на разных языках</li>
+        <li>Собрать Docker контейнеры</li>
+        <li>Загрузить проект на GitHub</li>
+        <li>Документировать процесс работы</li>
+    </ul>
+
+    <p><strong>Технологии:</strong></p>
+    <ul>
+        <li>Python: калькулятор и игра "Камень-ножницы-бумага"</li>
+        <li>Java: калькулятор и игра "Угадай число"</li>
+        <li>Dart: калькулятор</li>
+        <li>HTML/JavaScript/Nginx: этот веб-сайт</li>
+    </ul>
+
     <footer>
-      <p>Авторские права © 2023/2024 MPT</p>
-      <p>Практическая работа №4 - Docker</p>
+        <p>Авторские права © 2023/2024 MPT</p>
+        <p>Практическая работа №4 - Docker</p>
     </footer>
-  </body>
+</body>
 </html>
+
