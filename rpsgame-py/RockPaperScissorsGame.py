@@ -1,46 +1,46 @@
-# Rock, Paper, Scissors game
+# Игра Камень, Ножницы, Бумага
 
 import random
 
-print("Rock, Paper, Scissors")
+print("Камень, Ножницы, Бумага")
 
-# available options
-options = ["rock", "paper", "scissors"]
+# доступные варианты
+options = ["камень", "ножницы", "бумага"]
 
 while True:
-    print("Enter choice \n1 for rock \n2 for paper \n3 for scissors \n0 for quit")
+    print("Выберите вариант:\n1 - камень\n2 - ножницы\n3 - бумага\n0 - выход")
     
-    # get player's choice
-    choice = int(input("Your turn: "))
+    # выбор игрока
+    choice = int(input("Ваш ход: "))
     
-    # quit the game if player enters 0
+    # выход из игры если игрок вводит 0
     if choice == 0:
-        print("Bye!")
+        print("До свидания!")
         break
     elif choice > 3:
-        print("Invalid input. Try again.")
+        print("Неверный ввод. Попробуйте снова.")
         continue
 
-    # get computer's choice
+    # выбор компьютера
     comp_choice = random.choice(options)
-    print("Computer chose ", comp_choice)
+    print("Компьютер выбрал: ", comp_choice)
 
-    # determine the winner
-    if choice == 1 and comp_choice == "rock":
-        print("Tie!")
-    elif choice == 1 and comp_choice == "paper":
-        print("You lose!", comp_choice, "covers", "rock")
-    elif choice == 1 and comp_choice == "scissors":
-        print("You win!", "rock", "smashes", comp_choice)
-    elif choice == 2 and comp_choice == "rock":
-        print("You win!", "paper", "covers", comp_choice)
-    elif choice == 2 and comp_choice == "paper":
-        print("Tie!")
-    elif choice == 2 and comp_choice == "scissors":
-        print("You lose!", comp_choice, "cut", "paper")
-    elif choice == 3 and comp_choice == "rock":
-        print("You lose!", comp_choice, "smashes", "scissors")
-    elif choice == 3 and comp_choice == "paper":
-        print("You win!", "scissors", "cut", comp_choice)
-    elif choice == 3 and comp_choice == "scissors":
-        print("Tie!")
+    # определение победителя
+    player_choice_name = ""
+    if choice == 1:
+        player_choice_name = "камень"
+    elif choice == 2:
+        player_choice_name = "ножницы"
+    elif choice == 3:
+        player_choice_name = "бумага"
+    
+    print("Вы выбрали: ", player_choice_name)
+    
+    if player_choice_name == comp_choice:
+        print("Ничья!")
+    elif (player_choice_name == "камень" and comp_choice == "ножницы") or \
+         (player_choice_name == "ножницы" and comp_choice == "бумага") or \
+         (player_choice_name == "бумага" and comp_choice == "камень"):
+        print("Вы выиграли! ", player_choice_name, " побеждает ", comp_choice)
+    else:
+        print("Вы проиграли! ", comp_choice, " побеждает ", player_choice_name)
